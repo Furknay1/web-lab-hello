@@ -14,4 +14,12 @@ Vite + React + TypeScript kullanilarak olusturulmustur.
 - Vite
 
 ## Kurulum
-```bash
+ ```bash
+npm install
+ ```
+
+ ## Calistirma
+ ```bash
+ npm run dev
+ ```
+
