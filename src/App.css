@@ -1,42 +1,55 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Genel sifirlama */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; /* [cite: 549] */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body { 
+  font-family: system-ui, sans-serif; 
+  line-height: 1.6; /* [cite: 550] */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Skip link: normalde gizli, Tab ile gorunur */
+.skip-link {
+  position: absolute; /* [cite: 551, 552] */
+  top: -100px; /* Ekranda gizlemek icin negatif deger [cite: 553, 554] */
+  left: 0; /* [cite: 555] */
+  background: #1E3A8A; /* [cite: 556] */
+  color: white; /* [cite: 557] */
+  padding: 8px 16px; /* [cite: 558] */
+  z-index: 100; /* [cite: 565] */
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.skip-link:focus { 
+  top: 0; /* Tab ile odaklaninca gorunur hale gelir [cite: 559] */
 }
 
-.card {
-  padding: 2em;
+/* Focus gostergesi -- ASLA kaldirma */
+:focus { 
+  outline: 2px solid #2563EB; 
+  outline-offset: 2px; /* [cite: 561] */
 }
 
-.read-the-docs {
-  color: #888;
+/* Form stilleri */
+.form-group { 
+  margin-bottom: 1rem; /* [cite: 577] */
+}
+
+label { 
+  display: block; 
+  margin-bottom: 0.25rem; /*  */
+}
+
+input, textarea, select {
+  width: 100%; /* [cite: 590] */
+  padding: 0.5rem; /* [cite: 591] */
+  border: 1px solid #ccc; /* [cite: 592] */
+  border-radius: 4px; /* [cite: 586] */
+}
+
+.error-msg { 
+  color: red; 
+  font-size: 0.85rem; /* [cite: 593] */
 }
