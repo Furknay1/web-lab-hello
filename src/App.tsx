@@ -1,12 +1,12 @@
+import "./App.css";
+
 function App() {
   return (
     <>
-      {/* Skip Link: id ile birebir eşleşmeli ve boşluk içermemeli [cite: 1014, 1216] */}
       <a href="#main-content" className="skip-link">Ana icerige atla</a>
 
       <header>
-        
-        <h1>Furkan Ay - Kisisel Portfolyo</h1>
+        <h1 className="site-title">Furkan Ay - Kisisel Portfolyo</h1>
         <nav aria-label="Ana navigasyon">
           <ul>
             <li><a href="#hakkimda">Hakkimda</a></li>
@@ -16,35 +16,47 @@ function App() {
         </nav>
       </header>
 
-      
       <main id="main-content">
         <section id="hakkimda">
-          {/* Bölüm başlıkları h2 olmalıdır  */}
           <h2>Hakkimda</h2>
-          <figure>
-            <img 
-              src="profil.jpg" 
-              alt="Furkan Ay'ın vesikalik fotografi" 
-            />
-            <figcaption>Furkan Ay - Web Gelistirici</figcaption>
-          </figure>
-          <p>Merhaba, ben Furkan Ay. Modern web teknolojileri üzerine çalışıyorum.</p>
+          <div className="about-content">
+            <figure>
+              <img src="/pp.jpeg" alt="Furkan Ay'ın vesikalik fotografi" /> 
+              <figcaption>Furkan Ay - Web Gelistirici</figcaption> 
+            </figure>
+            <div className="about-text">
+              <p>Merhaba, ben Furkan Ay. Modern web teknolojileri üzerine çalışıyorum.</p>
+              <ul className="skill-tags" role="list">
+                <li>HTML5</li><li>CSS3</li><li>React</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section id="projeler">
           <h2>Projelerim</h2>
-          <article>
-            <h3>Siber Güvenlik Projesi</h3>
-            <figure>
-              <img 
-                src="proje.jpg" 
-                alt="Furkan Ay'ın siber projesine ait teknik detay ekran görüntüsü" 
-              />
-              <figcaption>Proje Detayi: Siber Güvenlik Analizi</figcaption>
-            </figure>
-          </article>
+          <div className="project-grid">
+            <article className="project-card">
+              <img src="/proje.jpg" alt="Siber guvenlik projesi ekran goruntusu" />
+              <h3>Siber Güvenlik Projesi</h3>
+              <p>Tehdit algılama üzerine kapsamlı çalışma.</p>
+              <ul className="skill-tags">
+                <li>Python</li><li>Linux</li>
+              </ul>
+            </article>
+
+            <article className="project-card">
+              <img src="/proje2.jpg" alt="Web projesi ekran goruntusu" />
+              <h3>Modern Web Tasarımı</h3>
+              <p>Responsive ve erişilebilir arayüz geliştirme projesi.</p>
+              <ul className="skill-tags">
+                <li>TypeScript</li><li>CSS Grid</li>
+              </ul>
+            </article>
+          </div>
         </section>
 
+        {/* --- İLETİŞİM FORMU BÖLÜMÜ (LAB-2 Uygulama-4) --- */}
         <section id="iletisim">
           <h2>Iletisim</h2>
           <form action="#" method="POST" noValidate>
