@@ -1,4 +1,23 @@
-/* index.css dosyasını tamamen boş bırakabilirsin veya sadece bunu yaz */
-:root {
-  color-scheme: light;
+@import "tailwindcss";
+
+/* 1. TEMA BLOĞU: Sadece değişkenleri içerir [cite: 137-153] */
+@theme {
+  --color-primary: #1E3A8A;
+  --color-secondary: #2563EB;
+  --color-accent: #7C3AED;
+  --color-surface: #F9FAFB;
+  --color-muted: #6B7280;
+  --color-error: #DC2626;
+  --color-success: #16A34A;
+  
+  --font-family-sans: system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'Fira Code', 'Consolas', monospace;
+}
+
+/* 2. DARK MODE STRATEJİSİ: Bloğun DIŞINDA olmalı [cite: 351] */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Erişilebilirlik linkini de buraya ekleyebilirsin [cite: 893-899] */
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:bg-blue-800 focus:text-white focus:p-3 focus:z-50;
 }
